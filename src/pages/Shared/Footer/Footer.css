@@ -1,0 +1,10 @@
+.footer {
+}
+.footer h2 {
+  color: #130f40;
+}
+.detail > p,
+h2 {
+  text-align: center;
+  cursor: pointer;
+}

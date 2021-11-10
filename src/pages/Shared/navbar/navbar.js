@@ -1,10 +1,24 @@
 import React from 'react';
-import './navbar.css';
+import './NavBar.css'
+import { NavLink } from 'react-router-dom';
+import img from '../../../images/logo.png'
 const navbar = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+               <div className="navbar">
+                      <div>
+                          <img src={img} alt="" />
+                      </div>
+                        <div className="menu">
+                            <NavLink to="/home">home</NavLink>
+                            <NavLink to="/allProducts">all Products</NavLink>
+                            <NavLink to="/dashboard">DashBoard</NavLink>
+                             <div  className="signIn" >
+                                  <NavLink to="/dashboard">SIGN IN</NavLink>
+                            </div>
+                        </div>
+               </div>
+        </>
     );
 };
 
