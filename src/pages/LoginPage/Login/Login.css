@@ -1,0 +1,15 @@
+.login img {
+  width: 100%;
+}
+.login {
+  margin-top: 50px;
+}
+.login-btn {
+  text-align: center;
+}
+.login-btn a {
+  text-decoration: none;
+}
+.login-btn p {
+  margin: 20px 0px;
+}

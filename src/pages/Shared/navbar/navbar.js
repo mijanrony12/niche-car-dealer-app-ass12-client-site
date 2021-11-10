@@ -2,7 +2,14 @@ import React from 'react';
 import './NavBar.css'
 import { NavLink } from 'react-router-dom';
 import img from '../../../images/logo.png'
-const navbar = () => {
+import useAuth from '../../../Hooks/useAuth';
+
+
+
+
+const Navbar = () => {
+    
+   const {user,logOut}=useAuth()
     return (
         <>
                <div className="navbar">
@@ -14,7 +21,11 @@ const navbar = () => {
                             <NavLink to="/moreCar">More Car</NavLink>
                             <NavLink to="/dashboard">DashBoard</NavLink>
                              <div  className="signIn" >
-                                  <NavLink to="/dashboard">SIGN IN</NavLink>
+                        { user.email ? 
+                        <NavLink onClick={logOut} to="">SIGN Out</NavLink>
+                            :
+                            <NavLink to="/login">SIGN IN</NavLink>
+                        }
                             </div>
                         </div>
                </div>
@@ -22,4 +33,4 @@ const navbar = () => {
     );
 };
 
-export default navbar;
+export default Navbar;
