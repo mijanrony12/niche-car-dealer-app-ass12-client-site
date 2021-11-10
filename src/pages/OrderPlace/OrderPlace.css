@@ -1,0 +1,20 @@
+.order-details {
+  width: 80%;
+  margin: 50px auto 0px;
+}
+.order-details input {
+  width: 100%;
+  display: block;
+  margin: 5px 0px;
+}
+.btn-color {
+  background: #eb4d4b;
+  border-radius: 10px;
+  border: none;
+  color: #ffffff;
+  padding: 10px 16px;
+  font-weight: 700;
+}
+.vector {
+  margin-top: 100px;
+}
