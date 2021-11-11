@@ -18,7 +18,7 @@ const Navbar = () => {
                       </div>
                         <div className="menu">
                             <NavLink to="/home">home</NavLink>
-                            <NavLink to="/moreCar">More Car</NavLink>
+                            <NavLink to="/moreCar">More-Car</NavLink>
                             <NavLink to="/dashboard">DashBoard</NavLink>
                              <div  className="signIn" >
                         { user.email ? 

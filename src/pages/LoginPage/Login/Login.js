@@ -8,7 +8,7 @@ import { Spinner } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router-dom';
 
 const Login = () => {
-    const { LoginUser, isLoading } = useAuth();
+    const { LoginUser, isLoading,authError } = useAuth();
     const location = useLocation()
     const history = useHistory()
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -18,7 +18,6 @@ const Login = () => {
              return <Spinner className="text-center" animation="border" variant="success" />
            }
     const onSubmit = data => {
-        console.log(data)
          
        LoginUser(data.email, data.password,location,history)
     };
@@ -35,7 +34,7 @@ const Login = () => {
                     
                        <label htmlFor="name">Your Password</label>
                       <input  { ...register("password") } placeholder="Your Password" />
-            
+                    <p className="text-danger">{authError}</p>
                       <input className="btn-color" type="submit" value="Login" />
                 </form> }
                 {isLoading && <Spinner className="text-center" animation="border" variant="success" />}

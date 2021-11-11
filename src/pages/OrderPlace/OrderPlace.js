@@ -5,19 +5,24 @@ import order from '../../images/order.jpg'
 import axios from 'axios';
 import swal from 'sweetalert';
 import useAuth from '../../Hooks/useAuth';
+import { useHistory } from 'react-router';
+
 const OrderPlace = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const {user} = useAuth()
+    const { register, handleSubmit,reset, formState: { errors } } = useForm();
+    const { user } = useAuth()
+    const history = useHistory()
     const onSubmit = data => {
-        console.log(data)
+        data.status='pending...'
         axios.post('http://localhost:5000/orders', data)
             .then(res => {
                 if (res.data.insertedId)
                 {
                     swal("Thanks", "Your order Complete!");
+                    history.push('/');
                 }
-            console.log(res.data);
-        })
+          
+            })
+        reset()
     };
     return (
         <div className="row">

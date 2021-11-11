@@ -4,6 +4,8 @@ import useProducts from '../../../Hooks/useProducts';
 import Product from '../../Product/Product';
 import Footer from '../../Shared/Footer/Footer';
 import NavBar from '../../Shared/NavBar/NavBar'
+import Banner from '../Banner/Banner';
+import TopBrand from '../TopBrand/TopBrand';
 
 
 
@@ -11,8 +13,8 @@ const Home = () => {
     const[products]=useProducts()
     return (
         <div>
-            <NavBar></NavBar><br />
-
+            <NavBar></NavBar>
+            <Banner></Banner>
             <div className="container">
                  <div className="row gy-3 my-5">
                 <h1 className="text-center heading">Our Car</h1>
@@ -24,7 +26,13 @@ const Home = () => {
                     }
                     <Link className="text-end" to='/moreCar'> See More Car</Link>
              </div>
-           </div>
+            </div>
+            <div className="container my-5">
+                  <h3 className="heading mt-3 mb-4 text-center">Our Top Brand</h3>
+                  <div className="row">
+                        <TopBrand></TopBrand>
+                  </div>
+            </div>
              <Footer></Footer>
         </div>
     );
