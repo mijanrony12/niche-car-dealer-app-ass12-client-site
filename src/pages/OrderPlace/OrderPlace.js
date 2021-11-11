@@ -4,8 +4,10 @@ import { useForm } from 'react-hook-form';
 import order from '../../images/order.jpg'
 import axios from 'axios';
 import swal from 'sweetalert';
+import useAuth from '../../Hooks/useAuth';
 const OrderPlace = () => {
-      const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const {user} = useAuth()
     const onSubmit = data => {
         console.log(data)
         axios.post('http://localhost:5000/orders', data)
@@ -24,10 +26,10 @@ const OrderPlace = () => {
                 <h3 className="heading mt-3 text-center">Please Confirm Your Order</h3>
                      <form onSubmit={handleSubmit(onSubmit)} className=" order-details">
                          <label htmlFor="name">Your Name</label>
-                        <input defaultValue="test" { ...register("name") } placeholder="Your Name" />
+                        <input defaultValue={user.displayName} { ...register("name") } placeholder="Your Name" />
                     
                        <label htmlFor="name">Your Email</label>
-                        <input {...register("email", { required: true })} placeholder="Your Email" />
+                        <input defaultValue={user.email} {...register("email", { required: true })} placeholder="Your Email" />
                         { errors.email && <span>This field is required</span> }
                     
                        <label htmlFor="name">Your Phone</label>

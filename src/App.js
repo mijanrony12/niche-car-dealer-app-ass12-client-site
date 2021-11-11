@@ -8,6 +8,9 @@ import ErrorPage from './pages/ErrorPage/ErrorPage';
 import Login from './pages/LoginPage/Login/Login';
 import Register from './pages/LoginPage/Register/Register';
 import AuthProvider from './Context/AuthProvider';
+import PrivateRoute from './pages/LoginPage/PrivateRoute/PrivateRoute';
+import DashBoard from './pages/DashBoards/DashBoard/DashBoard';
+import MyOrders from './pages/DashBoards/MyOrders/MyOrders';
 
 function App() {
   return (
@@ -25,9 +28,12 @@ function App() {
                               <Route exact path="/moreCar">
                                    <MoreCar></MoreCar>
                               </Route>
-                              <Route exact path="/orderPlace">
-                                   <OrderPlace></OrderPlace>
+                              <Route exact path="/dashboard">
+                                   <DashBoard></DashBoard>
                               </Route>
+                              <PrivateRoute exact path="/orderPlace">
+                                   <OrderPlace></OrderPlace>
+                              </PrivateRoute>
                               <Route exact path="/login">
                                    <Login></Login>
                               </Route>

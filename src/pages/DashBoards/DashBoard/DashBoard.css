@@ -1,0 +1,18 @@
+.dashboard {
+  background: #c7ecee;
+  height: 100vh;
+}
+.all-Link {
+}
+.all-Link a {
+  text-decoration: none;
+  display: block;
+  width: 70%;
+  margin: 12px auto;
+  padding: 6px 0px;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  background-color: #eb4d4b;
+}

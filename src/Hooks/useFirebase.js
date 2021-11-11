@@ -41,7 +41,7 @@ const useFirebase = () => {
 
 
    // login system implement
-  const LoginUser = (email, password) => {
+  const LoginUser = (email, password,location,history) => {
   
       setIsLoading(true)
           signInWithEmailAndPassword(auth, email, password)
@@ -49,6 +49,8 @@ const useFirebase = () => {
               
                 const user = userCredential.user;
                 setUser(user)
+                const destination = location?.state?.from || '/'
+                history.push(destination)
             })
             .catch((error) => {        
                setAuthError(error.message);

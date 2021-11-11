@@ -5,18 +5,22 @@ import login from '../../../images/login.jpg'
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import { Spinner } from 'react-bootstrap';
+import { useHistory, useLocation } from 'react-router-dom';
+
 const Login = () => {
-    const { LoginUser, isLoading } = useAuth()
-    if (isLoading)
-    {
-       return <Spinner className="text-center" animation="border" variant="success" />
-        
-    }
-  
-      const { register, handleSubmit, formState: { errors } } = useForm();
+    const { LoginUser, isLoading } = useAuth();
+    const location = useLocation()
+    const history = useHistory()
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    
+            if (isLoading)
+            {
+             return <Spinner className="text-center" animation="border" variant="success" />
+           }
     const onSubmit = data => {
         console.log(data)
-       LoginUser(data.email, data.password)
+         
+       LoginUser(data.email, data.password,location,history)
     };
     return (
          <div className="row login">
