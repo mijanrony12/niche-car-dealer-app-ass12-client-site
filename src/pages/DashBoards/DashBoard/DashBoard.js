@@ -11,15 +11,17 @@ import ManageProduct from '../ManageProduct/ManageProduct';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AddProduct from '../AddProduct/AddProduct';
 import { Link } from 'react-router-dom';
+import { Spinner } from 'react-bootstrap';
 
 
 const DashBoard = () => {
-    const { logOut,admin } = useAuth();
-    const [controls, setControls]=useState(admin? 'allOrders' : 'myOrders')
+  const { logOut, admin, isLoading } = useAuth();
+  const [ controls, setControls ] = useState(admin ? 'allOrders' : 'myOrders');
+
   return (
       // create dashboard for every user.
         <>
-            <div className="row mb-3">
+           <div className="row mb-3">
                   <div className="col-md-3 dashboard">
                        <div className="text-center mt-3">
                              <img src={logo} alt="" />
@@ -68,7 +70,8 @@ const DashBoard = () => {
                         controls === 'makeAdmin' && <MakeAdmin/>
                       }
                   </div>
-            </div>
+      </div> 
+      
             <Footer></Footer>
         </>
     );

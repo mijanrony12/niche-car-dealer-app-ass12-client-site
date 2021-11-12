@@ -27,7 +27,9 @@ const Navbar = () => {
                             :
                             <NavLink to="/login">SIGN IN</NavLink>
                         }
-                            </div>
+                        
+                    </div>
+                    <span style={{color:'#130f40', marginLeft:'12px', fontWeight:'bold'}}> {user.displayName}</span>
                         </div>
                </div>
         </>

@@ -6,6 +6,7 @@ import axios from 'axios';
 import swal from 'sweetalert';
 import useAuth from '../../Hooks/useAuth';
 import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const OrderPlace = () => {
     const { register, handleSubmit,reset, formState: { errors } } = useForm();
@@ -52,7 +53,13 @@ const OrderPlace = () => {
             </div>
             <div className="col-md-6 vector">
                  <img src={order} alt="" />
-           </div>
+            </div>
+            <Link style={ {
+                textAlign: 'center',
+                textDecoration: 'none',
+                fontWeight: 'bold',
+                fontSize:'22px'
+            } } to="/">Go Back</Link>
         </div>
     );
 };

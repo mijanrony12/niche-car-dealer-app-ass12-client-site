@@ -1,14 +1,14 @@
 import React from 'react';
-import { Spinner } from 'react-bootstrap';
+import { Button, Spinner } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
 import useAuth from '../../../Hooks/useAuth';
 import regLogo from '../../../images/register.jpg'
-import { useHistory,useLocation } from 'react-router-dom';
+import { useHistory} from 'react-router-dom';
 const Register = () => {
 
-    const {RegisterUser,isLoading,authError}=useAuth()
+    const {RegisterUser,isLoading,authError,signInUsingGoogle}=useAuth()
     const { register, handleSubmit, formState: { errors } } = useForm();
     
           const history=useHistory()
@@ -25,27 +25,32 @@ const Register = () => {
             return
         }
          
-        RegisterUser(data.email, data.password,history)
+        RegisterUser(data.email, data.password,data.name, history)
       
     };
+
+  
 
     return (
         // create a register form.
         <div className="row login">
                 
             <div className="col-md-6">
-                <h3 className="heading mt-3 text-center">Please Register Here</h3>
-                     {!isLoading && <form onSubmit={handleSubmit(onSubmit)} className=" order-details">
+                <h3 className="heading text-center">Please Register Here</h3>
+                     {!isLoading && <form onSubmit={handleSubmit(onSubmit)} className=" order-details" style={{marginTop:'0px'}}>
+
+                        <label htmlFor="name">Your name</label>
+                       <input type="text"  { ...register("name") } placeholder="Your Name" />
                     
-                       <label htmlFor="name">Your Email</label>
+                       <label htmlFor="email">Your Email</label>
                         <input {...register("email", { required: true })} placeholder="Your Email" />
                         { errors.email && <span>This field is required</span> }
                     
-                       <label htmlFor="name">Your Password</label>
+                       <label htmlFor="password">Your Password</label>
                       <input type="number"  { ...register("password") } placeholder="Your Password" />
                     
 
-                       <label htmlFor="name">Confirm Password</label>
+                       <label htmlFor="password">Confirm Password</label>
                       <input type="number"  { ...register("password2") } placeholder="Re- Password" />
                        <p className="text-danger">{authError}</p>
                       <input className="btn-color" type="submit" value="Register" />
@@ -54,7 +59,7 @@ const Register = () => {
                 
                 <div className="login-btn">
                      <Link className="text-center" to="/login">Already Have An Account? Please Login Here</Link>
-                     <p>------------------------------- <b>OR</b>-------------------------</p>
+                    
                </div>
             </div>
             <div className="col-md-6 ">
