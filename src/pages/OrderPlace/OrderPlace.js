@@ -13,7 +13,7 @@ const OrderPlace = () => {
     const history = useHistory()
     const onSubmit = data => {
         data.status='pending...'
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://stormy-reef-80779.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId)
                 {

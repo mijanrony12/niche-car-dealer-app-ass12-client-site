@@ -7,11 +7,16 @@ const AddProduct = () => {
      const { register, handleSubmit,reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         
-        axios.post('http://localhost:5000/products', data)
+        axios.post('https://stormy-reef-80779.herokuapp.com/products', data)
             .then(res => {
                 if (res.data.insertedId)
                 {
-                    
+                    swal({
+                        title: "Good job!",
+                        text: "Your product add database!",
+                        icon: "success",
+                        button: "Ok!",
+                        });
                 }
           
             })
@@ -28,7 +33,7 @@ const AddProduct = () => {
                         <input  {...register("price", { required: true })} placeholder="Product price" />
                         { errors.email && <span>This field is required</span> }
                     
-                       <label htmlFor="rating">Your Phone</label>
+                       <label htmlFor="rating">product Rating</label>
                       <input  { ...register("rating") } placeholder="Product Rating" />
                     
                        <label htmlFor="image">Image Link</label>

@@ -9,7 +9,7 @@ const MakeAdmin = () => {
     const {user} = useAuth()
     const onSubmit = data => {
         console.log(data)
-        axios.put('http://localhost:5000/users/admin', data)
+        axios.put('https://stormy-reef-80779.herokuapp.com/users/admin', data)
             .then(res => {
                 
                 if (res.data.modifiedCount)

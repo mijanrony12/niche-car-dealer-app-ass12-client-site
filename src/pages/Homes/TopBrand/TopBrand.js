@@ -5,8 +5,7 @@ import brand3 from '../../../images/brands/brand3.jfif'
 const TopBrand = () => {
     return (
         <>
-            <div className="container">
-                  <div className="row">
+          
                         <div className="col-md-4" style={{boxShadow:'2px 2px 16px black', borderRadius:'6px'}}>
                                 <img style={ { width: '100%', height:'200px' } } src={ brand1 } alt="" />
                                 <h4 className="text-center">TOYOTA</h4>
@@ -20,8 +19,7 @@ const TopBrand = () => {
                                 <h4 className="text-center">BMW</h4>
                         </div>
     
-                  </div>
-            </div>
+               
         </>
     );
 };

@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 
 const DashBoard = () => {
     const { logOut,admin } = useAuth();
-    const [controls, setControls]=useState(' ')
+    const [controls, setControls]=useState(admin? 'allOrders' : 'myOrders')
     return (
         <>
             <div className="row mb-3">
@@ -31,14 +31,14 @@ const DashBoard = () => {
                                  <button onClick={()=> setControls('myOrders')}>My Orders</button>
                                   <button onClick={()=> setControls('review')}>Review</button>
                                 <button onClick={ () => setControls('payment') }>Payment</button>
-                                </>
+                            </>
                             :
                             <>
                                   <button onClick={()=> setControls('allOrders')}>Manage All Orders</button>
                                   <button onClick={()=> setControls('product')}>Manage Product</button>
                                   <button onClick={()=> setControls('addProduct')}>Add Product</button>
                                   <button onClick={ () => setControls('makeAdmin') }>Make Admin</button>
-                                 </>
+                            </>
                         }
                                  
                               <Link style={{textDecoration:'none'}} to="/">Home Page</Link>    

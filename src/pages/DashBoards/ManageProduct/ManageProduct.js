@@ -12,7 +12,7 @@ const ManageProduct = () => {
                  const proceed = window.confirm('Are You Sure? You Want to Delete This Product')
                 if (proceed)
                 {
-                    axios.delete(`http://localhost:5000/products/${id}`)
+                    axios.delete(`https://stormy-reef-80779.herokuapp.com/products/${id}`)
                                 .then(res => {
                                    
                                     if (res.data.deletedCount)

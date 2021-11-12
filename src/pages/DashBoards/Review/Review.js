@@ -9,11 +9,11 @@ const Review = () => {
     const {user} = useAuth()
     const onSubmit = data => {
         
-        axios.post('http://localhost:5000/review', data)
+        axios.post('https://stormy-reef-80779.herokuapp.com/review', data)
             .then(res => {
                 if (res.data.insertedId)
                 {
-                    swal("Thanks", "Your order Complete!");
+                    swal("Thanks", "we got your feedback!");
                 }
           
             })

@@ -9,7 +9,7 @@ const MyOrders = () => {
     const {user}=useAuth()
     
     useEffect(() => {
-        axios.get(`http://localhost:5000/orders?email=${user.email}`)
+        axios.get(`https://stormy-reef-80779.herokuapp.com/orders?email=${user.email}`)
             .then(res => {
             setOrders(res.data)
                 console.log(res.data)
@@ -20,7 +20,7 @@ const MyOrders = () => {
        const proceed = window.confirm('Are You Sure? You Want to Delete This Product')
                 if (proceed)
                 {
-                    axios.delete(`http://localhost:5000/orders/${id}`)
+                    axios.delete(`https://stormy-reef-80779.herokuapp.com/orders/${id}`)
                                 .then(res => {
                                    
                                     if (res.data.deletedCount)

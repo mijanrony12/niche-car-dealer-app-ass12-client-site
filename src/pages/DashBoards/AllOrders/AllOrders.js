@@ -9,7 +9,7 @@ const AllOrders = () => {
     const {user}=useAuth()
     
     useEffect(() => {
-        axios.get(`http://localhost:5000/orders`)
+        axios.get(`https://stormy-reef-80779.herokuapp.com/orders`)
             .then(res => {
             setOrders(res.data)
                 console.log(res.data)
@@ -22,7 +22,7 @@ const AllOrders = () => {
         const proceed = window.confirm('Are You Sure? you to update this value!')
         if (proceed)
         {
-            axios.put(`http://localhost:5000/orders/${id}`)
+            axios.put(`https://stormy-reef-80779.herokuapp.com/orders/${id}`)
             .then(res => {
                 if (res.data.modifiedCount)
                 {
