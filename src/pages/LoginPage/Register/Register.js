@@ -30,6 +30,7 @@ const Register = () => {
     };
 
     return (
+        // create a register form.
         <div className="row login">
                 
             <div className="col-md-6">

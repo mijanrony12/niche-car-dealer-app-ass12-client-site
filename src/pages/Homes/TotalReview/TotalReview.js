@@ -13,6 +13,7 @@ const TotalReview = () => {
              })
     },[])
     return (
+        //display total review from database.
         <>
            
                   {

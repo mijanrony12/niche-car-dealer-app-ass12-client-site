@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css'
 const Footer = () => {
     return (
+        //footer section implement..
         <>
             <div className=" footer row">
                    <div className="col-md-4">

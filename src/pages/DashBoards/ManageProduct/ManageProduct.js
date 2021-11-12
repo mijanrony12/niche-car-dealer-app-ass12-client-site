@@ -8,7 +8,8 @@ const ManageProduct = () => {
     const [ products,setProducts ] = useProducts();
    
     
-     const deleteSingleProduct = (id) => {
+    const deleteSingleProduct = (id) => {
+         //delete from database.
                  const proceed = window.confirm('Are You Sure? You Want to Delete This Product')
                 if (proceed)
                 {
@@ -27,6 +28,7 @@ const ManageProduct = () => {
     }
 
     return (
+        //you can see all product here
         <>
             <div className="row gy-3">
                 <h4 className="heading text-center">All Product Here</h4>

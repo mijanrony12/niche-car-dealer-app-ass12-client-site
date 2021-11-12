@@ -25,6 +25,7 @@ const OrderPlace = () => {
         reset()
     };
     return (
+        //you can order from here
         <div className="row">
                 
             <div className="col-md-6">

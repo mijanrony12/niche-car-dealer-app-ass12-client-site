@@ -9,7 +9,6 @@ import Footer from '../../Shared/Footer/Footer';
 import AllOrders from '../AllOrders/AllOrders';
 import ManageProduct from '../ManageProduct/ManageProduct';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
-import Navbar from '../../Shared/NavBar/NavBar';
 import AddProduct from '../AddProduct/AddProduct';
 import { Link } from 'react-router-dom';
 
@@ -17,7 +16,8 @@ import { Link } from 'react-router-dom';
 const DashBoard = () => {
     const { logOut,admin } = useAuth();
     const [controls, setControls]=useState(admin? 'allOrders' : 'myOrders')
-    return (
+  return (
+      // create dashboard for every user.
         <>
             <div className="row mb-3">
                   <div className="col-md-3 dashboard">

@@ -8,7 +8,7 @@ const Review = () => {
       const { register, handleSubmit,reset, formState: { errors } } = useForm();
     const {user} = useAuth()
     const onSubmit = data => {
-        
+        // add review database.
         axios.post('https://stormy-reef-80779.herokuapp.com/review', data)
             .then(res => {
                 if (res.data.insertedId)
@@ -21,6 +21,7 @@ const Review = () => {
     };
 
     return (
+        //you can add review 
         <div>
               <h3 className="heading mt-3 text-center">Please Give Your Feedback</h3>
                      <form onSubmit={handleSubmit(onSubmit)} className=" order-details">

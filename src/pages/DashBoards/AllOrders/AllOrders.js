@@ -17,7 +17,7 @@ const AllOrders = () => {
         })
     }, [orders])
     
-
+//data update from user
     const handleUpdate = id => {
         const proceed = window.confirm('Are You Sure? you to update this value!')
         if (proceed)
@@ -38,6 +38,7 @@ const AllOrders = () => {
         
     }
     return (
+        //show all user data
         <>
               <div>
                    <h4 className="heading text-center">You can Manage All Orders</h4>

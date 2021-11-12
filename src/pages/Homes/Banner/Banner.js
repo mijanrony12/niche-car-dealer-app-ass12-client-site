@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Banner.css';
 const Banner = () => {
     return (
+        // create website banner
         <>
                 <div className="banner">
                 <div class="banner-text">

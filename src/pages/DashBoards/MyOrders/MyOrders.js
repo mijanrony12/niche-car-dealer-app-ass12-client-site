@@ -17,6 +17,7 @@ const MyOrders = () => {
     }, [])
     
     const handleDelete = id => {
+        //delete from database.
        const proceed = window.confirm('Are You Sure? You Want to Delete This Product')
                 if (proceed)
                 {
@@ -39,6 +40,7 @@ const MyOrders = () => {
     }
     
     return (
+        //you can delete here
         <>
               <div>
                    <h4 className="heading text-center">You can Manage All Orders</h4>

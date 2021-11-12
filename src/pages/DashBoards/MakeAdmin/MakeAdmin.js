@@ -8,7 +8,8 @@ const MakeAdmin = () => {
       const { register, handleSubmit,reset, formState: { errors } } = useForm();
     const {user} = useAuth()
     const onSubmit = data => {
-        console.log(data)
+
+        // data update
         axios.put('https://stormy-reef-80779.herokuapp.com/users/admin', data)
             .then(res => {
                 
@@ -20,6 +21,7 @@ const MakeAdmin = () => {
         reset()
     };
     return (
+        //you can make admin
       <>
               <div className="text-center">
                 <h4 className="heading mt-3">You Can Make Admin Any User</h4>

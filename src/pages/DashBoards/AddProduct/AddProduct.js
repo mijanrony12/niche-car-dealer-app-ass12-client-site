@@ -6,7 +6,8 @@ import swal from 'sweetalert';
 const AddProduct = () => {
      const { register, handleSubmit,reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        
+
+        //data post at database mongodb
         axios.post('https://stormy-reef-80779.herokuapp.com/products', data)
             .then(res => {
                 if (res.data.insertedId)
@@ -22,7 +23,9 @@ const AddProduct = () => {
             })
         reset()
     };
+    
     return (
+        //create form for add product
         <div>
             <h3 className="heading mt-3 text-center">Add a Product</h3>
                      <form onSubmit={handleSubmit(onSubmit)} className=" order-details">

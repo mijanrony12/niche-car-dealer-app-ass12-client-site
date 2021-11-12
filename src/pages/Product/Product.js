@@ -2,9 +2,12 @@ import React from 'react';
 import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 import './Product.css'
+
+
 const Product = ({ product }) => {
     const { name,img,desc,price,rating } = product;
     return (
+        //single product here
         <div className="col-md-6 col-lg-4 product">
             
                 <img src={ img } alt="" />

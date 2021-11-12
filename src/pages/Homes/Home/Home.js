@@ -13,6 +13,7 @@ import TotalReview from '../TotalReview/TotalReview';
 const Home = () => {
     const[products]=useProducts()
     return (
+        // create a home page here
         <div>
             <NavBar></NavBar>
             <Banner></Banner>

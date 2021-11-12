@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 
-
+//load all products here
 const useProducts = () => {
    const [products, setProducts]=useState([])
     useEffect(() => {

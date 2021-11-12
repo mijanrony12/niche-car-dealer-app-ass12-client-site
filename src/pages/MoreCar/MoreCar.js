@@ -6,6 +6,7 @@ import Navbar from '../Shared/NavBar/NavBar';
 const MoreCar = () => {
         const[products]=useProducts()
     return (
+        //display total car here
         <>
             <Navbar></Navbar>
             <div className="container">

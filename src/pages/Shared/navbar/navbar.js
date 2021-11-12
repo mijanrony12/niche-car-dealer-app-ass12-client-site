@@ -11,6 +11,7 @@ const Navbar = () => {
     
    const {user,logOut}=useAuth()
     return (
+        // create navigation menu...
         <>
                <div className="navbar">
                       <div>

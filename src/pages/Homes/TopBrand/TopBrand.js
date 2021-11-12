@@ -3,7 +3,8 @@ import brand1 from '../../../images/brands/brand1.png'
 import brand2 from '../../../images/brands/brand2.png'
 import brand3 from '../../../images/brands/brand3.jfif'
 const TopBrand = () => {
-    return (
+        return (
+            // create brand section
         <>
           
                         <div className="col-md-4" style={{boxShadow:'2px 2px 16px black', borderRadius:'6px'}}>
