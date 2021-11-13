@@ -11,11 +11,11 @@ import ManageProduct from '../ManageProduct/ManageProduct';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AddProduct from '../AddProduct/AddProduct';
 import { Link } from 'react-router-dom';
-import { Spinner } from 'react-bootstrap';
+
 
 
 const DashBoard = () => {
-  const { logOut, admin, isLoading } = useAuth();
+  const { logOut, admin,  } = useAuth();
   const [ controls, setControls ] = useState(admin ? 'allOrders' : 'myOrders');
 
   return (
@@ -27,19 +27,19 @@ const DashBoard = () => {
                              <img src={logo} alt="" />
                        </div>
                         <div className="text-center mt-5 all-Link">
-                                  <button onClick={logOut}>Log Out</button>
+                                  <Link to="" onClick={logOut}>Log Out</Link>
                         { !admin ?
                             <>
-                                 <button onClick={()=> setControls('myOrders')}>My Orders</button>
-                                  <button onClick={()=> setControls('review')}>Review</button>
-                                <button onClick={ () => setControls('payment') }>Payment</button>
+                                 <Link to="" onClick={()=> setControls('myOrders')}>My Orders</Link>
+                                  <Link to="" onClick={()=> setControls('review')}>Review</Link>
+                                <Link to="" onClick={ () => setControls('payment') }>Payment</Link>
                             </>
                             :
                             <>
-                                  <button onClick={()=> setControls('allOrders')}>Manage All Orders</button>
-                                  <button onClick={()=> setControls('product')}>Manage Product</button>
-                                  <button onClick={()=> setControls('addProduct')}>Add Product</button>
-                                  <button onClick={ () => setControls('makeAdmin') }>Make Admin</button>
+                                  <Link to="" onClick={()=> setControls('allOrders')}>Manage All Orders</Link>
+                                  <Link to="" onClick={()=> setControls('product')}>Manage Product</Link>
+                                  <Link to="" onClick={()=> setControls('addProduct')}>Add Product</Link>
+                                  <Link to="" onClick={ () => setControls('makeAdmin') }>Make Admin</Link>
                             </>
                         }
                                  
