@@ -10,7 +10,7 @@ import Register from './pages/LoginPage/Register/Register';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './pages/LoginPage/PrivateRoute/PrivateRoute';
 import DashBoard from './pages/DashBoards/DashBoard/DashBoard';
-import MyOrders from './pages/DashBoards/MyOrders/MyOrders';
+
 
 function App() {
   return (
