@@ -28,9 +28,9 @@ function App() {
                               <Route exact path="/moreCar">
                                    <MoreCar></MoreCar>
                               </Route>
-                              <PrivateRoute exact path="/dashboard">
+                              <Route exact path="/dashboard">
                                    <DashBoard></DashBoard>
-                              </PrivateRoute>
+                              </Route>
                               <PrivateRoute exact path="/orderPlace">
                                    <OrderPlace></OrderPlace>
                               </PrivateRoute>
