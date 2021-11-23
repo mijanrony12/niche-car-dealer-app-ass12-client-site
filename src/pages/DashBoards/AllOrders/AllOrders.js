@@ -31,7 +31,7 @@ const AllOrders = () => {
                                 text: "Shipping Complete!",
                                 icon: "success",
                                 button: "Ok!",
-                        });
+                           });
                  }
              })
         }
@@ -81,3 +81,5 @@ const AllOrders = () => {
 };
 
 export default AllOrders;
+
+// this is my order components
