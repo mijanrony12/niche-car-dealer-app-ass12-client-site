@@ -16,6 +16,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  font-family: "Roboto", sans-serif;
+}
+.banner-text p {
+  font-family: "Roboto Mono", monospace;
 }
 .banner-text button {
   border: none;
@@ -23,6 +27,7 @@
   display: inline-block;
   padding: 10px 25px;
   color: #fff;
+  font-family: "Roboto", sans-serif;
   background-color: #eb4d4b;
   border-radius: 8px;
   font-size: 1.4rem;

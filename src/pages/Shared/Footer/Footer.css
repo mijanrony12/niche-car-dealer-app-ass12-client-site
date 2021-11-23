@@ -2,6 +2,10 @@
 }
 .footer h2 {
   color: #130f40;
+  font-family: "Fira Sans", sans-serif;
+}
+.footer p {
+  font-family: "Roboto Mono", monospace;
 }
 .detail > p,
 h2 {

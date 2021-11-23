@@ -10,6 +10,10 @@
 .product h3 {
   color: #130f40;
   text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+}
+.product p {
+  font-family: "Roboto Mono", monospace;
 }
 .product:hover {
   transform: translate(0px, -10px);
@@ -43,6 +47,6 @@
   color: #ffffff;
   padding: 10px 16px;
 }
-.star-color{
+.star-color {
   color: #130f40;
 }

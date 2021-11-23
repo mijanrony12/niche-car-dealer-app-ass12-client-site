@@ -21,7 +21,7 @@ const TotalReview = () => {
                          <div className="col-md-4 ">
                             <Card style={ { width: '18rem', height:'200px'}}>
                                 <Card.Body>
-                                <Card.Title className="text-center">{review.name}</Card.Title>
+                                <Card.Title className="text-center" style={ {fontFamily:'Roboto, sans-serif'}}>{review.name}</Card.Title>
                                 <div style={{color:'#eb4d4b', textAlign:'center'}}>
                                     <Rating
                                             initialRating={review.rating}
@@ -30,7 +30,7 @@ const TotalReview = () => {
                                             fullSymbol="fas fa-star"
                                             />
                                     </div>
-                                    <Card.Text>
+                                    <Card.Text style={ {fontFamily:'Roboto Mono, monospace'}}>
                                              {review.review}
                                     </Card.Text>
                                   

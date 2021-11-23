@@ -30,16 +30,16 @@ const DashBoard = () => {
                                   <Link to="" onClick={logOut}>Log Out</Link>
                         { !admin ?
                             <>
-                                 <Link to="" onClick={()=> setControls('myOrders')}>My Orders</Link>
-                                  <Link to="" onClick={()=> setControls('review')}>Review</Link>
-                                <Link to="" onClick={ () => setControls('payment') }>Payment</Link>
+                                 <button onClick={()=> setControls('myOrders')}>My Orders</button>
+                                  <button  onClick={()=> setControls('review')}>Review</button>
+                                <button  onClick={ () => setControls('payment') }>Payment</button>
                             </>
                             :
                             <>
-                                  <Link to="" onClick={()=> setControls('allOrders')}>Manage All Orders</Link>
-                                  <Link to="" onClick={()=> setControls('product')}>Manage Product</Link>
-                                  <Link to="" onClick={()=> setControls('addProduct')}>Add Product</Link>
-                                  <Link to="" onClick={ () => setControls('makeAdmin') }>Make Admin</Link>
+                                  <button  onClick={()=> setControls('allOrders')}>Manage All Orders</button>
+                                  <button  onClick={()=> setControls('product')}>Manage Product</button>
+                                  <button  onClick={()=> setControls('addProduct')}>Add Product</button>
+                                  <button onClick={ () => setControls('makeAdmin') }>Make Admin</button>
                             </>
                         }
                                  
@@ -47,7 +47,7 @@ const DashBoard = () => {
                         </div>
                   </div>
                   <div className="col-md-9">
-                    <h1 className="heading text-center my-3">Your DashBoard</h1>
+                    <h1 className="heading text-center my-3">Welcome Your DashBoard</h1>
                       {
                         controls === 'myOrders' && <MyOrders/>
                       }
@@ -79,3 +79,59 @@ const DashBoard = () => {
 
 export default DashBoard;
 
+
+
+//  <>
+//            <div className="row mb-3">
+//                   <div className="col-md-3 dashboard">
+//                        <div className="text-center mt-3">
+//                              <img src={logo} alt="" />
+//                        </div>
+//                         <div className="text-center mt-5 all-Link">
+//                                   <Link to="" onClick={logOut}>Log Out</Link>
+//                         { !admin ?
+//                             <>
+//                                  <Link to="" onClick={()=> setControls('myOrders')}>My Orders</Link>
+//                                   <Link to="" onClick={()=> setControls('review')}>Review</Link>
+//                                 <Link to="" onClick={ () => setControls('payment') }>Payment</Link>
+//                             </>
+//                             :
+//                             <>
+//                                   <Link to="" onClick={()=> setControls('allOrders')}>Manage All Orders</Link>
+//                                   <Link to="" onClick={()=> setControls('product')}>Manage Product</Link>
+//                                   <Link to="" onClick={()=> setControls('addProduct')}>Add Product</Link>
+//                                   <Link to="" onClick={ () => setControls('makeAdmin') }>Make Admin</Link>
+//                             </>
+//                         }
+                                 
+//                               <Link style={{textDecoration:'none'}} to="/">Home Page</Link>    
+//                         </div>
+//                   </div>
+//                   <div className="col-md-9">
+//                     <h1 className="heading text-center my-3">Your DashBoard</h1>
+//                       {
+//                         controls === 'myOrders' && <MyOrders/>
+//                       }
+//                       {
+//                         controls === 'review' && <Review/>
+//                       }
+//                       {
+//                         controls === 'payment' && <Payment/>
+//                       }
+//                       {
+//                         controls === 'allOrders' && <AllOrders/>
+//                       }
+//                       {
+//                         controls === 'product' && <ManageProduct/>
+//                       }
+//                       {
+//                         controls === 'addProduct' && <AddProduct/>
+//                       }
+//                       {
+//                         controls === 'makeAdmin' && <MakeAdmin/>
+//                       }
+//                   </div>
+//       </div> 
+      
+//             <Footer></Footer>
+//         </>
